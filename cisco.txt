@@ -1,0 +1,39 @@
+## edx-platform
+-e git+https://github.com/cisco-ibleducation/ibl-api-auth-devx.git@bd8d671ab9a0a472051e1140e966b6c99c91c1e3#egg=ibl-api-auth
+-e git+https://github.com/cisco-ibleducation/ibl-assessments-results-master.git@bf3572897b9a334f809622248e5525f4ef6164da#egg=ibl-assessments-results
+-e git+https://github.com/cisco-ibleducation/ibl_badge_server.git@e57f8ea6d922541b0d98f27c2cb045b24beedfd3#egg=ibl-badge-server
+-e git+https://github.com/cisco-ibleducation/ibl-catalog-app-proxy-devx.git@4f8f4fa481c9f624e015b9d82365c917c59667d9#egg=ibl-catalog-app
+-e git+https://github.com/cisco-ibleducation/ibl-catalog-dashboard-api-master.git@235e5d9c93e20d0cbbb0dfd529a71a193c1f137b#egg=ibl-catalog-dashboard-api
+-e git+https://github.com/cisco-ibleducation/ibl-catalog-management-api.git@98ef9e14275c892829814787136df5f7661297dd#egg=ibl-catalog-management-api
+-e git+https://github.com/cisco-ibleducation/ibl-catalog-metadata.git@85dd2846474a67efff1a1a150dab612d9528f662#egg=ibl-catalog-metadata
+-e git+https://github.com/cisco-ibleducation/ibl-completion-api.git@43d3ad513cc0ebe13c99a70e91c9888f89a6a3dc#egg=ibl-completion-api
+-e git+https://github.com/cisco-ibleducation/ibl-course-import-from-template-master.git@ea88b61ed3ad815d3b5dd62372f50f0d2b1e1878#egg=ibl-course-import-from-template
+-e git+https://github.com/cisco-ibleducation/ibl-course-management-api-devx.git@5e3891f015b8e708b7c621c1cf9a4f4d5d1408d4#egg=ibl-course-management-api
+-e git+https://github.com/cisco-ibleducation/ibl-edx-calendar-app.git@c4b4fd9c95b2b1f78d9c0378ce47910d78d9216c#egg=ibl-edx-calendar-app
+-e git+https://github.com/cisco-ibleducation/ibl-edx-course-tab-app.git@2e884b904fed7a337ee1605e25ef5475070c369d#egg=ibl-edx-course-tab-app
+-e git+https://github.com/cisco-ibleducation/ibl-edx-signal-relay.git@5b916d2f8c5ee95b84c61d5b2e78afd2cbc77e56#egg=ibl-edx-signal-relay
+-e git+https://github.com/cisco-ibleducation/ibl-edx-sites-api-devx.git@e7390955ad8be090552535b1c7e1e81f5a58ad4f#egg=ibl-edx-sites-api
+-e git+https://github.com/cisco-ibleducation/ibl-enrollment-api-master.git@41eef2cb9fcad9f04745cba58e92570310320edb#egg=ibl-enrollment-api ### This is v0.2.1 but v0.2.3 is installed
+-e git+https://github.com/cisco-ibleducation/ibl-import-export-patcher.git@bf196d4dd27699db840fa497f6ca67c2dd8945b1#egg=ibl-import-export-patcher
+-e git+https://github.com/cisco-ibleducation/ibl-interactive-server-token-app.git@7be40edacd601ceb39d8df0da8876612727de164#egg=ibl-interactive-server-token-app
+## https://gitlab.com/iblstudios/ibl-lti-cryptography-app This app doesn't exist in github
+-e git+https://github.com/cisco-ibleducation/ibl-request-router-devx.git@56cf54224aeefc9f7b5581dfd4b265eb96324d66#egg=ibl-request-router
+-e git+https://github.com/cisco-ibleducation/ibl-tpa-middleware.git@73cef653a3c1ce1b9a7261c913644f6477604cac#egg=ibl-tpa-middleware
+-e git+https://github.com/cisco-ibleducation/ibl-user-management-api-master.git@f8cd8987b9ff7af767f220539063de5e8be5e77a#egg=ibl-user-management-api
+-e git+https://github.com/cisco-ibleducation/ibl-webex-calendar-app.git@f45fc55940b1115d943e646d604eae65e2d274bb#egg=ibl-webex-calendar-app
+
+-e git+https://github.com/cisco-ibleducation/cisco-lti-consumer-xblock.git@dc4b4ea8037ddac8f802dc1de89bf06642c7ed01#egg=lti-advantage-consumer-xblock
+-e git+https://github.com/cisco-ibleducation/cisco-lti-app-center.git@901c7fd2eb82af11efe1a2b0950e3942a619e447#egg=lti-app-center
+-e git+https://github.com/cisco-ibleducation/cisco-lti-messages-master.git@af323e660205519eede382a0f3724d25cdd7e56d#egg=lti-messages
+-e git+https://github.com/cisco-ibleducation/cisco-lti-provider-master.git@b2e12b3eeeac090f3aa02615bb436c50486b23ed#egg=lti-provider
+
+-e git+https://github.com/cisco-ibleducation/ibl-django-oidc-provider.git@9a0af852bbf9e87054694e32999c9bf4cb64df8a#egg=django-oidc-provider
+
+## data manager
+-e git+https://github.com/cisco-ibleducation/dl-manager.git@839b477f0400943048f98244aafdb380402a87ae
+-e git+https://github.com/cisco-ibleducation/ibl-traefik-router.git@6d6ad1ac100e21e8b85f810688e0f4893734c5f9
+
+## interactive server
+-e git+https://github.com/cisco-ibleducation/ibl-int-badge-ui.git@60ed0d8fef1d2b4764bcc42c0da7fdbbcf93cc6a
+-e git+https://github.com/cisco-ibleducation/ibl-int-lti-ui.git@c1848e409b9dc0bb7982f400facc37d4f62aeb86 ### There seems to be a later commit (fe40a85dcbc78f9c68a00931226e53ef62b18804) that is not installed
+
