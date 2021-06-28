@@ -35,5 +35,5 @@
 
 ## interactive server
 -e git+https://github.com/cisco-ibleducation/ibl-int-badge-ui.git@60ed0d8fef1d2b4764bcc42c0da7fdbbcf93cc6a
--e git+https://github.com/cisco-ibleducation/ibl-int-lti-ui.git@c1848e409b9dc0bb7982f400facc37d4f62aeb86 ### There seems to be a later commit (fe40a85dcbc78f9c68a00931226e53ef62b18804) that is not installed
+-e git+https://github.com/cisco-ibleducation/ibl-int-lti-ui.git@fe40a85dcbc78f9c68a00931226e53ef62b18804
 
