@@ -16,7 +16,7 @@ git+https://github.com/cisco-ibleducation/ibl-edx-sites-api-devx.git@e7390955ad8
 git+https://github.com/cisco-ibleducation/ibl-enrollment-api-master.git@41eef2cb9fcad9f04745cba58e92570310320edb#egg=ibl_enrollment_api ### This is v0.2.1 but v0.2.3 is installed
 git+https://github.com/cisco-ibleducation/ibl-import-export-patcher.git@bf196d4dd27699db840fa497f6ca67c2dd8945b1#egg=ibl_import_export_patcher
 git+https://github.com/cisco-ibleducation/ibl-interactive-server-token-app.git@7be40edacd601ceb39d8df0da8876612727de164#egg=ibl_interactive_server_token_app
-## https://gitlab.com/iblstudios/ibl-lti-cryptography-app This app doesn't exist in github
+git+https://github.com/cisco-ibleducation/ibl-lti-cryptography-app.git@742b1689de7bc5a8c3d7300fff60dcfcda23f735#egg=ibl_lti_cryptography_app
 git+https://github.com/cisco-ibleducation/ibl-request-router-devx.git@56cf54224aeefc9f7b5581dfd4b265eb96324d66#egg=ibl_request_router
 git+https://github.com/cisco-ibleducation/ibl-tpa-middleware.git@73cef653a3c1ce1b9a7261c913644f6477604cac#egg=ibl_tpa_middleware
 git+https://github.com/cisco-ibleducation/ibl-user-management-api-master.git@f8cd8987b9ff7af767f220539063de5e8be5e77a#egg=ibl_user_management_api
