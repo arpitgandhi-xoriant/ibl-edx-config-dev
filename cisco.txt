@@ -18,7 +18,7 @@ git+ssh://git@github.com/cisco-ibleducation/ibl-import-export-patcher.git@bf196d
 git+ssh://git@github.com/cisco-ibleducation/ibl-interactive-server-token-app.git@7be40edacd601ceb39d8df0da8876612727de164#egg=ibl_interactive_server_token_app
 git+ssh://git@github.com/cisco-ibleducation/ibl-lti-cryptography-app.git@742b1689de7bc5a8c3d7300fff60dcfcda23f735#egg=ibl_lti_cryptography_app
 git+ssh://git@github.com/cisco-ibleducation/ibl-request-router-devx.git@56cf54224aeefc9f7b5581dfd4b265eb96324d66#egg=ibl_request_router
-git+ssh://git@github.com/cisco-ibleducation/ibl-tpa-middleware.git@73cef653a3c1ce1b9a7261c913644f6477604cac#egg=ibl_tpa_middleware
+git+ssh://git@github.com/cisco-ibleducation/ibl-tpa-middleware.git@0bce127fc8d35e472f24064bcad7e522471ea742#egg=ibl_tpa_middleware
 git+ssh://git@github.com/cisco-ibleducation/ibl-user-management-api-master.git@f8cd8987b9ff7af767f220539063de5e8be5e77a#egg=ibl_user_management_api
 git+ssh://git@github.com/cisco-ibleducation/ibl-webex-calendar-app.git@f45fc55940b1115d943e646d604eae65e2d274bb#egg=ibl_webex_calendar_app
 
