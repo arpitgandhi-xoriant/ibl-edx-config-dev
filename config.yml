@@ -1,0 +1,33 @@
+CMS_HOST: devstudio.socialgoodplatform.com
+CONTACT_EMAIL: contact@devlms.socialgoodplatform.com
+ENABLE_HTTPS: true
+ID: QM1s8PUFFMltVVCnM6kzqhL6
+
+
+LANGUAGE_CODE: en
+LMS_HOST: devlms.socialgoodplatform.com
+MYSQL_HOST: "<SET ME>"
+MYSQL_ROOT_PASSWORD: <SET ME>
+OPENEDX_MYSQL_PASSWORD: <SET ME>
+OPENEDX_SECRET_KEY: PvcY8F8G5WrdYIG6cD1N4qTH
+PLATFORM_NAME: "Social Good Platform"
+EDX_PLATFORM_REPOSITORY: https://github.com/edx/edx-platform.git
+EDX_PLATFORM_VERSION: open-release/koa.3
+
+RUN_CADDY: false
+RUN_CMS: true
+RUN_ELASTICSEARCH: false
+RUN_FORUM: false
+RUN_LMS: true
+RUN_MONGODB: true
+RUN_MYSQL: true
+RUN_REDIS: true
+RUN_SMTP: false
+
+MONGODB_DATABASE: <SET ME>
+MONGODB_HOST: <SET ME>
+MONGODB_PORT: 27017
+MONGODB_USERNAME: "<SET ME>"
+MONGODB_PASSWORD: "<SET ME>"
+
+

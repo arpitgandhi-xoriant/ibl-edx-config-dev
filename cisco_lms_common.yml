@@ -1,0 +1,114 @@
+name: cisco_lms_common
+version: 0.1.0
+patches:
+  openedx-lms-common-settings: |
+    ENABLE_HTML_XBLOCK_STUDENT_VIEW_DATA = True
+    IBL_AUTO_CREATE_HONOR_MODE = True
+    IBL_SITES_ENABLE_CMS_SITES = True
+    IBL_SITES_ENABLE_MICROSITES = True
+
+    MANAGER_BASE_URL = 'https://manager.devlms.socialgoodplatform.com'
+    MANAGER_AUTH_ENABLED = True
+    MANAGER_AUTH_APP_ID = "manager"
+    MANAGER_DEFAULT_ORG = "main"
+    MANAGER_CLUSTER_ID = "default"
+    MANAGER_MULTITENANCY_ENABLED = True
+    MANAGER_PROXY_TIMEOUT = 20
+    MANAGER_PROXY_ENABLED = True
+    MANAGER_VERIFY_SSL = True
+
+    API_AUTH_VERIFY_SSL = True
+
+    #### LTI - OIDC Provider Hook
+    OIDC_IDTOKEN_PROCESSING_HOOK = 'lti_advantage_consumer.id_token_hook.id_token_hook'
+
+    #### IBL TPA ####
+    TPA_MIDDLEWARE_DEFAULT_PROVIDER = 'keycloak'
+    TPA_LOGOUT_PROVIDER = 'keycloak'
+    TPA_ENABLE_OP_SESSION_MANAGEMENT = False
+
+    #### Xblock
+    SESSION_COOKIE_SAMESITE = 'None'
+    SESSION_COOKIE_SAMESITE_KEYS = ['sessionid', 'csrftoken', 'openedx-language-preference']
+  
+    # Calendar
+    IBL_FERNET_KEY = 'VsYK1s2tw4EMp8EMgZTXDK5WYAITJb6ANdZ8ayu-cjs='
+    IBL_INTERACTIVE_SERVER_OAUTH_APP_CLIENT_ID = '1M2ZH6UFSNx12oc5fdsphr294AeCLqZj45NJkseW'
+
+    LMS_OAUTH2_TOKEN_ENDPOINT = '/oauth2/access_token/'
+    LMS_CALENDAR_APP_CLIENT_ID = 'RNPCyjyGkaGKTaAbZuXGcmIcTwJyWb5exrbbcfbo'
+    LMS_CALENDAR_APP_CLIENT_SECRET = 'CI3s5KWqUfQdVr70YxvRC5jmns2Hu8ncOaD5ksdIEmJZ19AR8ptfwCmHEQALInBPeIGynpQhdPjngzR1oQ3pGzdNNt1d7P2zxAccuPAaPTtfRbn37WgKFHp4JwDtmlD5'
+    LMS_COURSE_ENROLLED_USERS_ENDPOINT = '/api/ibl/v1/enrolled-students/'
+    LMS_USER_COURSE_SCORE_ENDPOINT = '/api/ibl/v1/student-score/'
+    LMS_CHECK_COURSE_INSTRUCTOR_ENDPOINT = '/api/ibl/v1/is-instructor/'
+    LMS_USER_IS_ORG_ADMIN_ENDPOINT = '/api/ibl/v1/is-org-admin/'
+    LMS_COURSE_DETAILS_ENDPOINT = '/api/ibl/v1/courses/'
+
+    IBL_ICS_FILES_PATH = '/edx/var/edxapp/ibl_webex_calendar_app/ics_files/'
+
+    IBL_CALENDAR_LAUNCH_URL = '/api/ibl/v1/calendar/launch/'
+    IBL_BADGE_LAUNCH_URL = '/api/ibl/v1/badge/launch/'
+    IBL_WEBEX_ADMIN_LAUNCH_URL = '/api/ibl/v1/webex-admin/launch/'
+
+
+    # Badge
+    BADGR_SERVER_HOST = "https://badge.dev.socialgoodplatform.com"
+    BADGR_CLIENT_ID = 'IOpqBCwiee1tww1um3JQCmhYPeor3IWU0ZKHJ17J'
+    BADGR_CLIENT_SECRET = 'tfz8iYfh3hHMkbVA8wkOyMPs2LsqqVScWNZ4pmwqNIKlQfgGlhLXAdYujhTKW0vMZOSNFxQ8JIUOnnbl3UN0YoWHUYOJxHOOarMxiWJCwgjVvxhQAuP5sRhWi2QdNYWY'
+
+    BADGR_USER = 'badgradmin'
+    BADGR_USER_PASSWORD = 'ZdCoYNGx35gjh4kvfb7mRqFSKJuerX2V'
+    BADGR_ISSUER_EMAIL = 'noreply@socialgoodplatform.com'
+    ACCLAIM_API_ORIGIN = "https://sandbox-api.youracclaim.com/v1"
+    DEFAULT_ISSUER_URL = "https://dev.socialgoodplatform.com"
+
+    IBL_EMAIL_HOST = 'email-smtp.us-east-1.amazonaws.com'
+    IBL_EMAIL_HOST_PASSWORD = 'BBN2Tt7Lzdqmi4wWuqvREJIWSs6lb8RruBOnFuKfiRAn'
+    IBL_EMAIL_HOST_USER = 'AKIATNGWK2QPYX277EET'
+    IBL_EMAIL_PORT=25
+    
+    IBL_WEBEX_CLIENT_ID = 'C6f9aa430bee01e866da819ea4057e0112d9b0d330caca5198b04d08578183fd3'
+    IBL_WEBEX_SECRET_ID = '4e2b1229af6c3be84f94fe7c9477a0a14678c40d1388e13069dfc4c7d99e53eb'
+    IBL_WEBEX_REDIRECT_URI = 'https://interactive.dev.socialgoodplatform.com/oauth/redirect/webex'
+
+    IBL_CALENDAR_FRONTEND_URL = 'https://interactive.dev.socialgoodplatform.com/calendar/'
+    IBL_BADGE_FRONTEND_URL = 'https://interactive.dev.socialgoodplatform.com/credentials/'
+    IBL_WEBEX_ADMIN_FRONTEND_URL = 'https://interactive.dev.socialgoodplatform.com/webex-auth/'
+
+    IBL_ALLOW_CALENDAR_IFRAME = True
+    IBL_ALLOW_BADGE_IFRAME = True
+
+    # xAPI
+    SCORM_XAPI_TOKEN_DURATION_MIN = 0
+    SCORM_XAPI_LRS_USE_PROXY = False
+    SCORM_XAPI_PROTO = 'https'
+    SCORM_XAPI_LRS_URL = ''
+
+    # NOTE: Set either username/password OR token. Comment out ones you don't need
+    SCORM_XAPI_LRS_PROXY_USERNAME = ''
+    SCORM_XAPI_LRS_PROXY_PASSWORD = ''
+    # SCORM_XAPI_LRS_PROXY_AUTH_TOKEN = ''
+
+    # Scorm/xApi S3 Backend Storage Setup - Added 21-02-11: GVA
+    IBL_USE_S3_STORAGE_BACKEND = False
+    IBL_AWS_ACCESS_KEY = ''
+    IBL_AWS_SECRET_KEY = ''
+    IBL_AWS_S3_BUCKET = ''
+
+    IBL_COMPLETION_BLOCK_TYPE_FILTER = [
+        'course',
+        'chapter',
+        'sequential',
+        'vertical',
+        'html',
+        'problem',
+        'video',
+        'discussion',
+        'drag-and-drop-v2',
+        'poll',
+        'word_cloud',
+        'scorm',
+        'lti_advantage_consumer',
+    ]
+
+    IBL_DISABLE_MARKETING_COOKIES = False
