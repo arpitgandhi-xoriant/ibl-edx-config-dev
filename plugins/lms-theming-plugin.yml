@@ -1,0 +1,7 @@
+#iblopen theming plugin
+name: lms-theming
+version: 0.1.0
+patches:
+  openedx-lms-common-settings: |
+    # lms theming global variables
+    ENABLE_IBLX_SENTRY_INTEGRATION = True

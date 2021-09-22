@@ -1,0 +1,13 @@
+name: ibl-catalog-metadata
+version: 0.1.0
+patches:
+  openedx-cms-common-settings: |
+    IBL_CATALOG_METADATA_COURSE_META_RESPONSE_CHOICES = {
+      "level": [
+          {'value': '', 'label': '---'},
+          {'value': 'Beginner', 'label': 'Beginner'},
+          {'value': 'Intermediate', 'label': 'Intermediate'},
+          {'value': 'Advanced', 'label': 'Advanced'}
+      ]
+    }
+

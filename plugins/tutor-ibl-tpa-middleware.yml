@@ -1,0 +1,6 @@
+name: ibl-tpa-middleware
+version: "0.0.0"
+patches:
+  openedx-cms-settings-common: |
+    # ibl-tpa-middleware
+    IS_CMS = True

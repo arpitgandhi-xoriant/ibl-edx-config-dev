@@ -1,0 +1,6 @@
+name: ibl-catalog-app-proxy
+version: 0.1.0
+patches:
+  openedx-cms-common-settings: |
+    IBL_CATALOG_APP_ENABLE_STUDIO_HOME_PATCH = True
+    IBL_CATALOG_APP_ENABLE_PROGRAM_PAGES = True

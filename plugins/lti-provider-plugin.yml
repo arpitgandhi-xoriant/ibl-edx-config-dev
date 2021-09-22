@@ -1,0 +1,11 @@
+name: lti-provider-plugin
+version: 0.1.0
+patches:
+  openedx-dockerfile: |
+    # rename the lti_provider default folder 
+    RUN rm -r /openedx/edx-platform/lms/djangoapps/lti_provider
+    RUN ln -s /openedx/requirements/cisco-lti-provider/lti_provider /openedx/edx-platform/lms/djangoapps
+  lms-env: |
+    "X_FRAME_OPTIONS": "ALLOW"
+  lms-env-features: |
+    "ENABLE_LTI_PROVIDER": true

@@ -1,0 +1,110 @@
+  name: ibl-theme-plugin
+  version: 0.1.0
+  patches:
+    openedx-dockerfile: |
+      # Run IBL theming commands in the tutor container
+      ARG ssh_private_key
+      # Authorize SSH Host
+      RUN mkdir -p /root/.ssh && \
+          chmod 0700 /root/.ssh && \
+          ssh-keyscan github.com > /root/.ssh/known_hosts
+
+      # Add the keys and set permissions
+      RUN echo "$ssh_private_key" > /root/.ssh/id_rsa && \
+          chmod 600 /root/.ssh/id_rsa
+
+      WORKDIR /openedx
+      #Clone base IBL Theme repo
+      #Clone the CMS base theme
+      RUN cd themes \
+          && git clone -b koa-tutor-ibl-theme git@github.com:cisco-ibleducation/iblx-cms.git iblx-cms/cms \
+          && cd iblx-cms/cms \
+          #&& git pull origin koa-tutor-ibl-theme \
+          && git checkout koa-tutor-ibl-theme \
+          && git branch
+      #Generate CMS package.json and install
+      RUN cd themes/iblx-cms/cms \
+          && node merge-deps.js \
+          && npm install
+      
+      #Clone the LMS base theme
+      RUN cd themes \
+          && git clone -b koa-tutor-ibl-theme git@github.com:cisco-ibleducation/iblx-lms.git iblx/lms \
+          && cd iblx/lms \
+          #&& git pull origin koa-tutor-ibl-theme \
+          && git checkout koa-tutor-ibl-theme \
+          && git branch
+      #Generate LMS package.json and install
+      RUN cd themes/iblx/lms \
+          && node merge-deps.js \
+          && npm install
+
+      #Creating the [LMS | CMS] symlinks
+      RUN ln -s /openedx/themes/iblx/lms/static/ /openedx/staticfiles/iblx-lms 
+      RUN ln -s /openedx/themes/iblx-cms/cms/static/ /openedx/staticfiles/iblx-test-cms
+      
+      #Verifying content of the [LMS | CMS] themes
+      RUN ls themes
+      RUN cd themes && ls && ls iblx-cms/cms 
+      RUN echo $PWD
+
+      #Get theme addons 
+      WORKDIR /openedx
+      RUN git clone -b koa-tutor-plugin git@github.com:cisco-ibleducation/iblx-lms-cisco.git setup/iblx-lms-cisco
+      WORKDIR /openedx/setup/iblx-lms-cisco
+      RUN apt-get update \
+          && apt-get upgrade -y \ 
+          && apt-get install -y rsync git 
+      RUN rsync -r -P ./ /openedx/themes/iblx/lms/ --exclude '.git' --exclude '*.md'
+
+      #Look for traces of iblx-cms in CMS
+      WORKDIR /openedx
+      RUN grep -rl "iblx-cms" themes
+
+      #IBL theming command after adding the theme add ons
+      WORKDIR /openedx
+      RUN cd themes/iblx-cms/cms \
+          && npm run initconf
+      RUN cd themes/iblx/lms \
+          && npm run initconf
+
+      #CMS Production commands after add ons
+      WORKDIR /openedx/themes/iblx-cms/cms
+      RUN npm run prod
+      #RUN npm run lib
+      RUN npm run sassprod
+
+      #LMS  Production commands after add ons
+      WORKDIR /openedx/themes/iblx/lms
+      RUN npm run vendor
+      RUN npm run lib
+      RUN npm run prod
+      RUN npm run sassprod
+
+      WORKDIR /openedx/edx-platform
+
+      RUN openedx-assets xmodule \
+          && openedx-assets npm \
+          && openedx-assets webpack --env=prod \
+          && openedx-assets common
+
+      RUN openedx-assets themes \
+          && openedx-assets build --env=prod \
+          && openedx-assets collect --settings=tutor.assets
+      
+      #Rename the default cms themes folder and create a new symlink with the same name
+      #RUN mv /openedx/staticfiles/iblx-cms /openedx/staticfiles/iblx-cms-original
+      RUN ln -s /openedx/themes/iblx-cms/cms/static/ /openedx/staticfiles/iblx-cms-test
+
+      #rsync content of the /themes/ibxl-cms and /staticfile/iblx-cms
+      RUN rsync -r -P /openedx/themes/iblx-cms/cms/static/ /openedx/staticfiles/iblx-cms --exclude '.git' --exclude '*.md'
+
+      #recollect the static files
+
+    lms-env: |
+      "COMPREHENSIVE_THEME_DIRS":["/openedx/themes"],
+      #"DEFAULT_SITE_THEME":"iblx",
+      "ENABLE_COMPREHENSIVE_THEMING": true
+
+    openedx-common-settings: |
+      ALLOWED_HOSTS=['*']

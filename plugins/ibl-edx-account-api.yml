@@ -1,0 +1,16 @@
+name: ibl-edx-account-api
+version: 0.1.0
+patches:
+  cms-env: |
+    "EMAIL_BACKEND": "django.core.mail.backends.smtp.EmailBackend",
+    "EMAIL_HOST": "smtp.gmail.com",
+    "EMAIL_PORT": 587,
+    "EMAIL_USE_TLS": true
+  lms-env: |
+    "EMAIL_BACKEND": "django.core.mail.backends.smtp.EmailBackend",
+    "EMAIL_HOST": "smtp.gmail.com",
+    "EMAIL_PORT": 587,
+    "EMAIL_USE_TLS": true
+  openedx-auth: |
+    "SMTP_USERNAME": "<gmail account sending emails>",
+    "EMAIL_HOST_PASSWORD": "<password to the gmail account>"
