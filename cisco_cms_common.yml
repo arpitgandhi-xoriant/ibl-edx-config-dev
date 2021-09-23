@@ -4,25 +4,9 @@ patches:
   openedx-cms-common-settings: |
 
     MANAGER_MULTITENANCY_ENABLED = True
-    MANAGER_BASE_URL = 'https://manager.devlms.socialgoodplatform.com'
-    MANAGER_AUTH_ENABLED = True
-    MANAGER_AUTH_APP_ID = "manager"
-    MANAGER_DEFAULT_ORG = "main"
     MANAGER_CLUSTER_ID = "default"
-    MANAGER_PROXY_TIMEOUT = 20
     MANAGER_PROXY_ENABLED = True
-    MANAGER_VERIFY_SSL = True
-    API_AUTH_VERIFY_SSL = True
     IBL_AUTO_CREATE_HONOR_MODE = True
-    IBL_CATALOG_METADATA_COURSE_META_RESPONSE_CHOICES = {
-        "level": [
-            {'value': '', 'label': '---'},
-            {'value': 'Beginner', 'label': 'Beginner'},
-            {'value': 'Introductory', 'label': 'Introductory'},
-            {'value': 'Intermediate', 'label': 'Intermediate'},
-            {'value': 'Advanced', 'label': 'Advanced'}
-        ]
-    }
     IBL_CATALOG_METADATA_COURSE_PUBLIC_META_FIELDS = [
         'subject', 'tags', 'level', 'topics', 'promotion'
     ]
@@ -32,10 +16,6 @@ patches:
     TEMPLATE_COURSES_PATH = '/edx/var/edxapp/ibl_cisco_app/templates/'
     IBL_CATALOG_METADATA_EMIT_EVENTS = True
     ENABLE_IBL_COURSE_DELETION_ENDPOINT = True
-    TPA_PROVIDER_BURST_THROTTLE = '10/min'
-    TPA_PROVIDER_SUSTAINED_THROTTLE = '50/hr'
-    TPA_MIDDLEWARE_TARGET_URLS = {'/login', '/register', '/signup', '/signin'}
-    TPA_MIDDLEWARE_DEFAULT_PROVIDER = 'keycloak'
     TPA_LOGOUT_PROVIDER = 'keycloak'
     TPA_ENABLE_OP_SESSION_MANAGEMENT = False
     SESSION_COOKIE_SAMESITE = 'None'
@@ -65,18 +45,14 @@ patches:
     IBL_EMAIL_HOST_PASSWORD = 'BBN2Tt7Lzdqmi4wWuqvREJIWSs6lb8RruBOnFuKfiRAn'
     IBL_EMAIL_HOST_USER = 'AKIATNGWK2QPYX277EET'
     IBL_EMAIL_PORT=25
-    IBL_WEBEX_CLIENT_ID = 'C6f9aa430bee01e866da819ea4057e0112d9b0d330caca5198b04d08578183fd3'
     IBL_WEBEX_SECRET_ID = '4e2b1229af6c3be84f94fe7c9477a0a14678c40d1388e13069dfc4c7d99e53eb'
-    IBL_WEBEX_REDIRECT_URI = 'https://interactive.dev.socialgoodplatform.com/oauth/redirect/webex'
     IBL_CALENDAR_FRONTEND_URL = 'https://interactive.dev.socialgoodplatform.com/calendar/'
     IBL_BADGE_FRONTEND_URL = 'https://interactive.dev.socialgoodplatform.com/credentials/'
     IBL_WEBEX_ADMIN_FRONTEND_URL = 'https://interactive.dev.socialgoodplatform.com/webex-auth/'
-    IBL_IS_CMS = True
     OIDC_IDTOKEN_PROCESSING_HOOK = 'lti_advantage_consumer.id_token_hook.id_token_hook'
     IBL_USE_S3_STORAGE_BACKEND = False                             
     IBL_AWS_ACCESS_KEY = ''                     
     IBL_AWS_SECRET_KEY = ''
     IBL_AWS_S3_BUCKET = ''                     
-    IBL_CMS_PREVENT_CONCURRENT_LOGINS = True
     IBL_DISABLE_MARKETING_COOKIES = False
     IBL_TPA_CHECK_LOGGED_IN_COOKIES = True
