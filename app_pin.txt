@@ -1,0 +1,41 @@
+## edx-platform
+ibl-api-auth-devx.git@bd8d671ab9a0a472051e1140e966b6c99c91c1e3
+ibl-assessments-results-master.git@bf3572897b9a334f809622248e5525f4ef6164da
+ibl_badge_server.git@e57f8ea6d922541b0d98f27c2cb045b24beedfd3
+ibl-catalog-app-proxy-devx.git@4f8f4fa481c9f624e015b9d82365c917c59667d9
+ibl-catalog-dashboard-api-master.git@235e5d9c93e20d0cbbb0dfd529a71a193c1f137b
+ibl-catalog-management-api.git@98ef9e14275c892829814787136df5f7661297dd
+ibl-catalog-metadata.git@85dd2846474a67efff1a1a150dab612d9528f662
+ibl-completion-api.git@43d3ad513cc0ebe13c99a70e91c9888f89a6a3dc
+ibl-course-import-from-template-master.git@ea88b61ed3ad815d3b5dd62372f50f0d2b1e1878
+ibl-course-management-api-devx.git@5e3891f015b8e708b7c621c1cf9a4f4d5d1408d4
+ibl-edx-calendar-app.git@c4b4fd9c95b2b1f78d9c0378ce47910d78d9216c
+ibl-edx-course-tab-app.git@2e884b904fed7a337ee1605e25ef5475070c369d
+ibl-edx-signal-relay.git@5b916d2f8c5ee95b84c61d5b2e78afd2cbc77e56
+ibl-edx-sites-api-devx.git@e7390955ad8be090552535b1c7e1e81f5a58ad4f
+ibl-enrollment-api-master.git@41eef2cb9fcad9f04745cba58e92570310320edb ### This is v0.2.1 but v0.2.3 is installed
+ibl-import-export-patcher.git@bf196d4dd27699db840fa497f6ca67c2dd8945b1
+ibl-interactive-server-token-app.git@7be40edacd601ceb39d8df0da8876612727de164
+ibl-lti-cryptography-app.git@742b1689de7bc5a8c3d7300fff60dcfcda23f735
+ibl-request-router-devx.git@56cf54224aeefc9f7b5581dfd4b265eb96324d66
+ibl-tpa-middleware.git@73cef653a3c1ce1b9a7261c913644f6477604cac
+ibl-user-management-api-master.git@f8cd8987b9ff7af767f220539063de5e8be5e77a
+ibl-webex-calendar-app.git@f45fc55940b1115d943e646d604eae65e2d274bb
+
+cisco-lti-consumer-xblock.git@dc4b4ea8037ddac8f802dc1de89bf06642c7ed01
+cisco-lti-app-center.git@901c7fd2eb82af11efe1a2b0950e3942a619e447
+cisco-lti-messages-master.git@af323e660205519eede382a0f3724d25cdd7e56d
+cisco-lti-provider-master.git@b2e12b3eeeac090f3aa02615bb436c50486b23ed
+ibl-edx-gdpr.git@c3a0f4174901748e61c1e746d86495027248d2c0
+
+ibl-django-oidc-provider.git@9a0af852bbf9e87054694e32999c9bf4cb64df8a
+
+## data manager
+dl-manager.git@839b477f0400943048f98244aafdb380402a87ae
+ibl-traefik-router.git@6d6ad1ac100e21e8b85f810688e0f4893734c5f9
+
+## interactive server
+ibl-int-badge-ui.git@60ed0d8fef1d2b4764bcc42c0da7fdbbcf93cc6a
+ibl-int-lti-ui.git@fe40a85dcbc78f9c68a00931226e53ef62b18804
+
+
