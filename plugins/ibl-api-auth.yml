@@ -1,0 +1,6 @@
+name: ibl-api-auth-plugin
+version: 0.1.0
+patches:
+  openedx-common-settings: |
+    API_AUTH_RENEW_BEFORE = 60*60*24
+    API_AUTH_VERIFY_SSL = True

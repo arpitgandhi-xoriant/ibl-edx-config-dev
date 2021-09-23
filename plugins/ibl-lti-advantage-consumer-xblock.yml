@@ -1,0 +1,10 @@
+name: ibl-lti-advantage-consumer-xblock
+version: "0.0.0"
+patches:
+  lms-env: |
+    "X_FRAME_OPTIONS": "ALLOW",
+    "DCS_SESSION_COOKIE_SAMESITE": "None",
+    "DCS_SESSION_COOKIE_SAMESITE_FORCE_ALL": true
+  openedx-cms-settings-common: |
+    "DCS_SESSION_COOKIE_SAMESITE": None
+    "DCS_SESSION_COOKIE_SAMESITE_FORCE_ALL": true

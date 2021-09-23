@@ -1,0 +1,11 @@
+name: ibl-edx-webex-xblock
+version: 0.1.0
+patches:
+  openedx-common-settings: |
+    IBL_WEBEX_ACCESS_TOKEN = "<webex access token to communicate with the webex rest api>"
+    IBL_WEBEX_REFRESH_TOKEN = "<webex refresh token to refresh the access token before it expires>"
+    IBL_WEBEX_CLIENT_ID = 'C6f9aa430bee01e866da819ea4057e0112d9b0d330caca5198b04d08578183fd3'
+    IBL_WEBEX_CLIENT_SECRET = "<client secret for the webex integration that you setup>"
+    IBL_WEBEX_REDIRECT_URI = 'https://interactive.dev.socialgoodplatform.com/oauth/redirect/webex'
+    IBL_REFRESH_ACCESS_TOKEN_INTERVAL = 5
+
