@@ -1,0 +1,58 @@
+name: cisco_cms_common
+version: 0.1.0
+patches:
+  openedx-cms-common-settings: |
+
+    MANAGER_MULTITENANCY_ENABLED = True
+    MANAGER_CLUSTER_ID = "default"
+    MANAGER_PROXY_ENABLED = True
+    IBL_AUTO_CREATE_HONOR_MODE = True
+    IBL_CATALOG_METADATA_COURSE_PUBLIC_META_FIELDS = [
+        'subject', 'tags', 'level', 'topics', 'promotion'
+    ]
+    EXIM_PATCHER_PROCESSORS = [
+        'ibl_import_export_patcher.processors.metadata'
+    ]
+    TEMPLATE_COURSES_PATH = '/edx/var/edxapp/ibl_cisco_app/templates/'
+    IBL_CATALOG_METADATA_EMIT_EVENTS = True
+    ENABLE_IBL_COURSE_DELETION_ENDPOINT = True
+    TPA_LOGOUT_PROVIDER = 'keycloak'
+    TPA_ENABLE_OP_SESSION_MANAGEMENT = False
+    SESSION_COOKIE_SAMESITE = 'None'
+    SESSION_COOKIE_SAMESITE_KEYS = ['sessionid', 'csrftoken', 'openedx-language-preference']
+    IBL_FERNET_KEY = 'VsYK1s2tw4EMp8EMgZTXDK5WYAITJb6ANdZ8ayu-cjs='
+    IBL_INTERACTIVE_SERVER_OAUTH_APP_CLIENT_ID = '1M2ZH6UFSNx12oc5fdsphr294AeCLqZj45NJkseW'
+    LMS_OAUTH2_TOKEN_ENDPOINT = '/oauth2/access_token/'
+    LMS_CALENDAR_APP_CLIENT_ID = 'RNPCyjyGkaGKTaAbZuXGcmIcTwJyWb5exrbbcfbo'
+    LMS_CALENDAR_APP_CLIENT_SECRET = 'CI3s5KWqUfQdVr70YxvRC5jmns2Hu8ncOaD5ksdIEmJZ19AR8ptfwCmHEQALInBPeIGynpQhdPjngzR1oQ3pGzdNNt1d7P2zxAccuPAaPTtfRbn37WgKFHp4JwDtmlD5'
+    LMS_COURSE_ENROLLED_USERS_ENDPOINT = '/api/ibl/v1/enrolled-students/'
+    LMS_USER_COURSE_SCORE_ENDPOINT = '/api/ibl/v1/student-score/'
+    LMS_CHECK_COURSE_INSTRUCTOR_ENDPOINT = '/api/ibl/v1/is-instructor/'
+    LMS_USER_IS_ORG_ADMIN_ENDPOINT = '/api/ibl/v1/is-org-admin/'
+    LMS_COURSE_DETAILS_ENDPOINT = '/api/ibl/v1/courses/'
+    IBL_ICS_FILES_PATH = '/edx/var/edxapp/ibl_webex_calendar_app/ics_files/'
+    IBL_CALENDAR_LAUNCH_URL = '/api/ibl/v1/calendar/launch/'
+    IBL_BADGE_LAUNCH_URL = '/api/ibl/v1/badge/launch/'
+    IBL_WEBEX_ADMIN_LAUNCH_URL = '/api/ibl/v1/webex-admin/launch/'
+    BADGR_SERVER_HOST = "https://badge.dev.socialgoodplatform.com"
+    BADGR_CLIENT_ID = 'IOpqBCwiee1tww1um3JQCmhYPeor3IWU0ZKHJ17J'
+    BADGR_CLIENT_SECRET = 'tfz8iYfh3hHMkbVA8wkOyMPs2LsqqVScWNZ4pmwqNIKlQfgGlhLXAdYujhTKW0vMZOSNFxQ8JIUOnnbl3UN0YoWHUYOJxHOOarMxiWJCwgjVvxhQAuP5sRhWi2QdNYWY'
+    BADGR_USER = 'badgradmin'
+    BADGR_USER_PASSWORD = 'ZdCoYNGx35gjh4kvfb7mRqFSKJuerX2V'
+    BADGR_ISSUER_EMAIL = 'noreply@socialgoodplatform.com'
+    ACCLAIM_API_ORIGIN = 'https://sandbox-api.youracclaim.com/v1'
+    IBL_EMAIL_HOST = 'email-smtp.us-east-1.amazonaws.com'
+    IBL_EMAIL_HOST_PASSWORD = 'BBN2Tt7Lzdqmi4wWuqvREJIWSs6lb8RruBOnFuKfiRAn'
+    IBL_EMAIL_HOST_USER = 'AKIATNGWK2QPYX277EET'
+    IBL_EMAIL_PORT=25
+    IBL_WEBEX_SECRET_ID = '4e2b1229af6c3be84f94fe7c9477a0a14678c40d1388e13069dfc4c7d99e53eb'
+    IBL_CALENDAR_FRONTEND_URL = 'https://interactive.dev.socialgoodplatform.com/calendar/'
+    IBL_BADGE_FRONTEND_URL = 'https://interactive.dev.socialgoodplatform.com/credentials/'
+    IBL_WEBEX_ADMIN_FRONTEND_URL = 'https://interactive.dev.socialgoodplatform.com/webex-auth/'
+    OIDC_IDTOKEN_PROCESSING_HOOK = 'lti_advantage_consumer.id_token_hook.id_token_hook'
+    IBL_USE_S3_STORAGE_BACKEND = False                             
+    IBL_AWS_ACCESS_KEY = ''                     
+    IBL_AWS_SECRET_KEY = ''
+    IBL_AWS_S3_BUCKET = ''                     
+    IBL_DISABLE_MARKETING_COOKIES = False
+    IBL_TPA_CHECK_LOGGED_IN_COOKIES = True
