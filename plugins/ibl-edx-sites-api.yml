@@ -1,0 +1,6 @@
+name: ibl-edx-sites-api
+version: 0.1.0
+patches:
+  openedx-lms-common-settings: |
+    IBL_SITES_ENABLE_CMS_SITES = False
+    IBL_SITES_ENABLE_MICROSITES = False
