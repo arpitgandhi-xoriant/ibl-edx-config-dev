@@ -1,0 +1,10 @@
+name: ibl-edx-course-tab-app
+version: 0.1.0
+patches:
+  openedx-lms-common-settings: |
+    IBL_CALENDAR_FRONTEND_URL = "<url to the calendar on the interactive server>"
+    IBL_BADGE_FRONTEND_URL = "<url to the badge on the interactive server>"
+    IBL_WEBEX_ADMIN_FRONTEND_URL = "<url to the webex admin on the interactive server>"
+    IBL_CALENDAR_LAUNCH_URL = '/api/ibl/v1/calendar/launch/'
+    IBL_BADGE_LAUNCH_URL = '/api/ibl/v1/badge/launch/'
+    IBL_WEBEX_ADMIN_LAUNCH_URL = '/api/ibl/v1/webex-admin/launch/'
